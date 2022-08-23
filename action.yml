@@ -15,7 +15,6 @@ runs:
   using: 'docker'
   image: 'docker://ghcr.io/apollo-fire/metrics-test-action:v0.0.1'
   args:
-    - ${{ inputs.connection-string }}
     - ${{ inputs.metrics-collection }}
     - ${{ inputs.metrics-path }}
 branding:
