@@ -5,4 +5,4 @@
 # 2 - path to metrics file
 
 metrics_path="/github/workspace/$2"
-python3 /upload_metrics.py "$1" "$metrics_path"
+python3 /upload_metrics.py "${CONNECTION_STRING}" "$1" "$metrics_path"
