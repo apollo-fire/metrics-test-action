@@ -1,5 +1,5 @@
 import json
-import os.path
+import os
 import sys
 
 import pymongo as pymongo
@@ -9,11 +9,18 @@ def main(args):
     """
     Connect to the metrics database and upload metrics to specified collection
     """
-    client = pymongo.MongoClient(args[1])
+    connection_string = os.getenv("CONNECTION_STRING", default=None)
+    if connection_string is None:
+        sys.exit(
+            "Connection string is not set."
+            + "Please set the CONNECTION_STRING env variable in your system."
+        )
+    
+    client = pymongo.MongoClient(connection_string)
     db = client["metrics"]
-    collection = db[args[2]]
+    collection = db[args[1]]
 
-    doc = load_doc(args[3])
+    doc = load_doc(args[2])
     collection.insert_one(doc)
 
     print(collection.find_one())
