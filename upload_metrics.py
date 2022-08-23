@@ -18,9 +18,9 @@ def main(args):
     
     client = pymongo.MongoClient(connection_string)
     db = client["metrics"]
-    collection = db[args[2]]
+    collection = db[args[1]]
 
-    doc = load_doc(args[3])
+    doc = load_doc(args[2])
     collection.insert_one(doc)
 
     print(collection.find_one())
