@@ -5,7 +5,8 @@
 # 2 - path to metrics file
 
 if [ -z "${CONNECTION_STRING}" ]; then
-  error "No [CONNECTION_STRING] set"
+  echo "No [CONNECTION_STRING] set"
+  exit 1
 fi
 
 metrics_path="/github/workspace/$2"
