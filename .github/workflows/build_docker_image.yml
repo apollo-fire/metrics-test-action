@@ -34,5 +34,5 @@ jobs:
             }}/metrics-test-action:${{
             env.RELEASE_VERSION
             }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+#          cache-from: type=gha
+#          cache-to: type=gha,mode=max
