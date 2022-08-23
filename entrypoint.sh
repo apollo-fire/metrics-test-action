@@ -11,7 +11,7 @@ if [ "$CONNECTION_STRING" = "" ]; then
     echo "2) Set the connection-string property to the appropriate env variable"
     echo "   E.g.,"
     echo "   env:"
-    echo "     CONNECTION_STRING: ${{ secret.CONNECTION_STRING }}"
+    echo '     CONNECTION_STRING: ${{ secret.CONNECTION_STRING }}'
     exit 1
 fi;
 
