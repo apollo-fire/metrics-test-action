@@ -13,4 +13,5 @@ if ["$1" = "NOT SET"]; then
     exit 1
 fi;
 
-python upload_metrics.py "$1" "$2" "$3"
+metrics_path="/github/workspace/$3"
+python3 /upload_metrics.py "$1" "$2" "$metrics_path"
