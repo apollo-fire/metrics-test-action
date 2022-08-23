@@ -18,15 +18,16 @@ def main(args):
 
     print(collection.find_one())
 
+
 def load_doc(rel_path):
     if os.path.exists(rel_path):
-        with open(rel_path, 'r') as json_file:
+        with open(rel_path, "r") as json_file:
             metrics_file = json.load(json_file)
             return metrics_file
     else:
         print("Specified path does not exist")
-        sys.exit("Specified path does not exist")        
+        sys.exit("Specified path does not exist")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(sys.argv)
