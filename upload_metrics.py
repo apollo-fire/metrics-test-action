@@ -15,7 +15,7 @@ def main(args):
             "Connection string is not set."
             + "Please set the CONNECTION_STRING env variable in your system."
         )
-    
+
     client = pymongo.MongoClient(connection_string)
     db = client["metrics"]
     collection = db[args[1]]
