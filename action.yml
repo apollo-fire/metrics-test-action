@@ -3,10 +3,6 @@ name: 'Upload Metrics Action'
 description: 'GitHub action to build and run Googletest cases'
 author: 'Grahame White'
 inputs:
-  connection-string:
-    description: 'connection string required to connect to database'
-    required: true
-    default: 'NOT SET'
   metrics-collection:
     description: 'the collection to add the metrics to'
     required: true
