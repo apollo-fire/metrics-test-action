@@ -1,6 +1,6 @@
 FROM alpine:3.16.0
 
-RUN apk --no-cache add python3=3.10.6-r0
+RUN apk --no-cache add python3=3.10.5-r0
 RUN pip install pymongo \
                 dnspython
 
